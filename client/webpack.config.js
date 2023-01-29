@@ -33,8 +33,8 @@ module.exports = {
       crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
       icons: [
         {
-          src: path.resolve('./favicon.ico'),
-          sizes: [48] // multiple sizes
+          src: path.resolve('./src/images/logo.png'),
+          size: 208 // multiple sizes
         }
       ]
     }),

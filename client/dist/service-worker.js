@@ -88,13 +88,13 @@ define(['./workbox-938f415b'], (function (workbox) { 'use strict';
     "revision": "746db68de78df5d3feaeac6b6c757b2a"
   }, {
     "url": "index.html",
-    "revision": "9a7969f1861683745e89b556f2eafeb8"
+    "revision": "1a8c604cccbecbd9d03bf334a9562efd"
   }, {
     "url": "main.css",
     "revision": "239e906feab05350d08577fe682fa161"
   }, {
     "url": "sw.js",
-    "revision": "cfaac4e90c42f3ba9ab59bb600bd08b0"
+    "revision": "e6911eeb7139b2929db360aa5216b600"
   }], {});
   workbox.registerRoute(/\.(?:png|jpg|jpeg|svg)$/, new workbox.CacheFirst({
     "cacheName": "images",
