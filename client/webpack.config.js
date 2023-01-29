@@ -34,7 +34,7 @@ module.exports = {
       icons: [
         {
           src: path.resolve('./favicon.ico'),
-          sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
+          sizes: [48] // multiple sizes
         }
       ]
     }),
