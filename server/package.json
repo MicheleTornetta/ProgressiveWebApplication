@@ -1,18 +1,16 @@
 {
-    "name": "JATE",
+    "name": "Jate",
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
     "scripts": {
-        "server": "nodemon server.js --ignore client"
+        "server": "node server.js --ignore client"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "codemirror": "^6.0.1",
-        "express": "^4.17.1",
-        "workbox-webpack-plugin": "^6.5.4"
+        "express": "^4.17.1"
     },
     "devDependencies": {
         "nodemon": "^2.0.4"
