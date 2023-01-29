@@ -42,6 +42,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "./src/images/", to: "images" },
+        { from: 'favicon.ico', to: 'favicon.ico' }
       ],
     }),
     new InjectManifest({

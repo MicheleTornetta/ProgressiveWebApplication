@@ -84,6 +84,9 @@ define(['./workbox-938f415b'], (function (workbox) { 'use strict';
     "url": "bundle.js",
     "revision": "4390f0e89dfdaea9732d9de975908164"
   }, {
+    "url": "favicon.ico",
+    "revision": "746db68de78df5d3feaeac6b6c757b2a"
+  }, {
     "url": "index.html",
     "revision": "9a7969f1861683745e89b556f2eafeb8"
   }, {
@@ -91,7 +94,7 @@ define(['./workbox-938f415b'], (function (workbox) { 'use strict';
     "revision": "239e906feab05350d08577fe682fa161"
   }, {
     "url": "sw.js",
-    "revision": "131031b89bf122b223db963faf74bd79"
+    "revision": "cfaac4e90c42f3ba9ab59bb600bd08b0"
   }], {});
   workbox.registerRoute(/\.(?:png|jpg|jpeg|svg)$/, new workbox.CacheFirst({
     "cacheName": "images",
