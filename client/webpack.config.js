@@ -1,14 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // Require the GenerateSW class of the WorkBoxPlugin 
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const {InjectManifest} = require('workbox-webpack-plugin');
 const path = require('path');
-const WebpackPwaManifest = require('webpack-pwa-manifest')
 
-// TODO: Added and configured workbox plugins for a service worker and manifest file.
-// TODO: Added CSS loaders and babel to webpack.
-
-
+// Added and configured workbox plugins for a service worker and manifest file.
+// Added CSS loaders and babel to webpack.
 
 module.exports = {
   mode: 'development',
@@ -24,8 +23,46 @@ module.exports = {
       title: 'Webpack Plugin',
     }),
     new MiniCssExtractPlugin(),
-    new WorkboxPlugin.GenerateSW()
-  ],
+    new InjectManifest({
+      swSrc: './src/sw.js',
+      swDest: 'service-worker.js',
+    }), 
+    new WorkboxPlugin.GenerateSW({
+      exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+      // Define runtime caching rules.
+      runtimeCaching: [{
+        // Match any request that ends with .png, .jpg, .jpeg or .svg.
+        urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+        
+        // Apply a cache-first strategy.
+        handler: 'CacheFirst',
+          options: {
+            // Use a custom cache name.
+            cacheName: 'images',
+
+            // Only cache 2 images.
+            expiration: {
+              maxEntries: 2,
+            },
+          },
+        }],
+      }),
+      new WebpackPwaManifest({
+        name: 'My Progressive Web App',
+        short_name: 'MyPWA',
+        description: 'My awesome Progressive Web App!',
+        background_color: '#ffffff',
+        publicPath: './',
+        crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+        icons: [
+          {
+            src: path.resolve('assets/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
+          }
+        ]
+      }),
+    ],
+
   module: {
     rules: [
       {
