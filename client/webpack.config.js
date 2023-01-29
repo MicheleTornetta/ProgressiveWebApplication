@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // Require the GenerateSW class of the WorkBoxPlugin 
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const {InjectManifest} = require('workbox-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
+
 const path = require('path');
 
 // Added and configured workbox plugins for a service worker and manifest file.
@@ -22,10 +24,29 @@ module.exports = {
       template: './index.html',
       title: 'Webpack Plugin',
     }),
+    new WebpackPwaManifest({
+      name: 'My Progressive Web App',
+      short_name: 'MyPWA',
+      description: 'My awesome Progressive Web App!',
+      background_color: '#ffffff',
+      publicPath: './',
+      crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+      icons: [
+        {
+          src: path.resolve('./favicon.ico'),
+          sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
+        }
+      ]
+    }),
     new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/images/", to: "images" },
+      ],
+    }),
     new InjectManifest({
-      swSrc: './src/sw.js',
-      swDest: 'service-worker.js',
+      swSrc: './src/js/sw.js',
+      swDest: 'sw.js',
     }), 
     new WorkboxPlugin.GenerateSW({
       exclude: [/\.(?:png|jpg|jpeg|svg)$/],
@@ -46,20 +67,6 @@ module.exports = {
             },
           },
         }],
-      }),
-      new WebpackPwaManifest({
-        name: 'My Progressive Web App',
-        short_name: 'MyPWA',
-        description: 'My awesome Progressive Web App!',
-        background_color: '#ffffff',
-        publicPath: './',
-        crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
-        icons: [
-          {
-            src: path.resolve('Assets/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
-          }
-        ]
       }),
     ],
 

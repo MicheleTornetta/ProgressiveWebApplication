@@ -1,11 +1,11 @@
 {
-  "name": "Jate",
+  "name": "jate",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start:dev": "webpack-dev-server --open",
-    "start": "",
+    "start": "cd server && node server",
     "server": "",
     "build": "webpack",
     "install": "",
