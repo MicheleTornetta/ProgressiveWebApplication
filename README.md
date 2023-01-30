@@ -4,7 +4,7 @@
 
 ## Table of Contents 
 - [Application Image](#application-image)
-- [Installation Instructions](#installation)
+- [Usage](#usage)
 - [Instructions](#instructions--usage)
 - [Usage Video](#usage-video)
 - [License](#license)
@@ -14,7 +14,7 @@
 ## Application Image 
 ![Application Image]((./assets/PWAimg1.png)
 
-## Installation Instructions
+## Usage
 If the user wants to work offline, the user can click on the install button which will place an icon on their desktop and can continue to use the editor.  Data typed into the editor while offline will also be saved.
 
 ## Instructions
