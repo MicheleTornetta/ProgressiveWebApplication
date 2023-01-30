@@ -210,6 +210,10 @@ h1 {
   }
 }
 
+#logoimg {
+  size: 48;
+}
+
 .hidden {
   display: none;
 }

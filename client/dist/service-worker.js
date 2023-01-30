@@ -82,19 +82,19 @@ define(['./workbox-938f415b'], (function (workbox) { 'use strict';
    */
   workbox.precacheAndRoute([{
     "url": "bundle.js",
-    "revision": "4390f0e89dfdaea9732d9de975908164"
+    "revision": "c60e14d8c91f39de01addc9dfffaafd4"
   }, {
     "url": "favicon.ico",
     "revision": "746db68de78df5d3feaeac6b6c757b2a"
   }, {
     "url": "index.html",
-    "revision": "1a8c604cccbecbd9d03bf334a9562efd"
+    "revision": "232e1f09536ead1ff538bd88c8f6026c"
   }, {
     "url": "main.css",
-    "revision": "239e906feab05350d08577fe682fa161"
+    "revision": "1f4dd4d8b98d715dae9a4d3519443937"
   }, {
     "url": "sw.js",
-    "revision": "e6911eeb7139b2929db360aa5216b600"
+    "revision": "bb1664e621b58fae814f1883e0fc9a50"
   }], {});
   workbox.registerRoute(/\.(?:png|jpg|jpeg|svg)$/, new workbox.CacheFirst({
     "cacheName": "images",
