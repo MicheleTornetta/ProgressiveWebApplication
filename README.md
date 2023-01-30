@@ -22,7 +22,7 @@ Once on the webpage, the user can start typing text which will automatically be 
 
 ## Usage Video
 An example of how it works can be viewed here: 
-![Application Gif]([Watch the video](https://www.youtube.com/watch?v=GANl6aods5s))
+([Watch the video](https://www.youtube.com/watch?v=iwiL00lqOC4))
 
 ## License 
 A short, permissive software license. Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.  There are many variations of this license in use.

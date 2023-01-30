@@ -94,7 +94,7 @@ define(['./workbox-938f415b'], (function (workbox) { 'use strict';
     "revision": "1f4dd4d8b98d715dae9a4d3519443937"
   }, {
     "url": "sw.js",
-    "revision": "bb1664e621b58fae814f1883e0fc9a50"
+    "revision": "a32419053087abed19588f94c5e00ad0"
   }], {});
   workbox.registerRoute(/\.(?:png|jpg|jpeg|svg)$/, new workbox.CacheFirst({
     "cacheName": "images",
