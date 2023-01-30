@@ -12,13 +12,13 @@
 - [Questions](#questions)
 
 ## Application Image 
-![Application Image]((./assets/logo.png)
+![Application Image]((./assets/PWAimg1.png)
 
 ## Installation Instructions
-Once on the webpage, the user can 
+If the user wants to work offline, the user can click on the install button which will place an icon on their desktop and can continue to use the editor.  Data typed into the editor while offline will also be saved.
 
 ## Instructions
-Once on the webpage, the user can 
+Once on the webpage, the user can start typing text which will automatically be retrievalbe through the IndexedDB. When the user comes back at a later time, they will find the text has been retrieved from the IndexedDB.  
 
 ## Usage Video
 An example of how it works can be viewed here: 
@@ -26,9 +26,6 @@ An example of how it works can be viewed here:
 
 ## License 
 A short, permissive software license. Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.  There are many variations of this license in use.
-
-## Credits 
-
 
 ## Questions
 If you would like to contribute or you simply have questions, please visit: 
